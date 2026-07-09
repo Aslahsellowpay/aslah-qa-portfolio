@@ -475,10 +475,7 @@ function ProjectCard({ p, i }: { p: (typeof projects)[number]; i: number }) {
             <div className="absolute inset-0 opacity-70 [background:radial-gradient(circle_at_30%_20%,rgba(79,70,229,0.55),transparent_60%),radial-gradient(circle_at_80%_80%,rgba(6,182,212,0.55),transparent_60%)]" />
             <div className="absolute inset-0 [background:linear-gradient(180deg,transparent,rgba(0,0,0,0.55))]" />
             <div className="relative flex h-full flex-col items-start justify-end p-6">
-              <div className="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-[11px] uppercase tracking-widest">
-                {p.tag}
-              </div>
-              <h3 className="mt-3 font-display text-3xl font-black text-gradient bg-gradient-to-r from-white to-[#22d3ee]">
+              <h3 className="font-display text-3xl font-black text-gradient bg-gradient-to-r from-white to-[#22d3ee]">
                 {p.name}
               </h3>
             </div>
