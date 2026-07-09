@@ -43,6 +43,7 @@ import {
   repos,
 } from "@/lib/portfolio-data";
 import { useCounter, useTypewriter } from "./effects";
+import aslahPhoto from "@/assets/aslah.png.asset.json";
 
 /* -------------------------- Shared -------------------------- */
 
@@ -211,17 +212,16 @@ export function Hero() {
                   aria-hidden
                   className="absolute inset-0 opacity-40 [background:radial-gradient(circle_at_30%_20%,rgba(124,58,237,0.6),transparent_60%),radial-gradient(circle_at_80%_80%,rgba(6,182,212,0.5),transparent_60%)]"
                 />
-                <div className="relative flex h-full flex-col items-center justify-center p-8 text-center">
-                  <div className="grid h-32 w-32 place-items-center rounded-full bg-gradient-to-br from-[#4f46e5] via-[#7c3aed] to-[#06b6d4] font-display text-5xl font-black text-white shadow-[0_30px_60px_-20px_rgba(124,58,237,0.6)]">
-                    AK
-                  </div>
-                  <div className="mt-6 font-display text-xl font-bold">
-                    {profile.name}
-                  </div>
-                  <div className="mt-1 text-sm text-muted-foreground">
-                    {profile.role}
-                  </div>
-                  <div className="mt-6 flex flex-wrap justify-center gap-2 text-[11px]">
+                <img
+                  src={aslahPhoto.url}
+                  alt={`${profile.name} — ${profile.role}`}
+                  className="absolute inset-0 h-full w-full object-cover"
+                  loading="eager"
+                />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#050816] via-[#050816]/70 to-transparent p-6">
+                  <div className="font-display text-xl font-bold">{profile.name}</div>
+                  <div className="mt-1 text-sm text-muted-foreground">{profile.role}</div>
+                  <div className="mt-3 flex flex-wrap gap-1.5 text-[11px]">
                     {["Selenium", "Postman", "Java", "SQL", "Jira"].map((t) => (
                       <span key={t} className="rounded-full glass px-2.5 py-1">
                         {t}
@@ -287,11 +287,15 @@ export function About() {
               <div className="absolute inset-0 -z-10 rounded-3xl bg-gradient-to-br from-[#4f46e5]/40 to-[#06b6d4]/40 blur-3xl" />
               <div className="glass-strong h-full w-full overflow-hidden rounded-3xl p-2">
                 <div className="relative h-full w-full overflow-hidden rounded-[1.4rem] bg-gradient-to-br from-[#111827] to-[#0b1120]">
-                  <div className="absolute inset-0 opacity-40 [background:radial-gradient(circle_at_20%_10%,rgba(79,70,229,0.6),transparent_60%),radial-gradient(circle_at_80%_90%,rgba(34,211,238,0.5),transparent_60%)]" />
-                  <div className="relative flex h-full flex-col items-center justify-center gap-4 p-8 text-center">
-                    <Cpu className="h-10 w-10 text-[#22d3ee]" />
-                    <div className="font-display text-2xl font-bold">Test. Break. Ship.</div>
-                    <div className="text-sm text-muted-foreground">Manual · Automation · API · SQL</div>
+                  <img
+                    src={aslahPhoto.url}
+                    alt={profile.name}
+                    className="absolute inset-0 h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-[#050816]/70 via-transparent to-[#06b6d4]/10" />
+                  <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs">
+                    <Cpu className="h-3.5 w-3.5 text-[#22d3ee]" /> Test. Break. Ship.
                   </div>
                 </div>
               </div>
