@@ -43,7 +43,7 @@ import {
   repos,
 } from "@/lib/portfolio-data";
 import { useCounter, useTypewriter } from "./effects";
-import aslahPhoto from "@/assets/aslah.png.asset.json";
+const profileImageSrc = "/images/aslah.png";
 
 /* -------------------------- Shared -------------------------- */
 
@@ -213,7 +213,7 @@ export function Hero() {
                   className="absolute inset-0 opacity-40 [background:radial-gradient(circle_at_30%_20%,rgba(124,58,237,0.6),transparent_60%),radial-gradient(circle_at_80%_80%,rgba(6,182,212,0.5),transparent_60%)]"
                 />
                 <img
-                  src={aslahPhoto.url}
+                  src={profileImageSrc}
                   alt={`${profile.name} — ${profile.role}`}
                   className="absolute inset-0 h-full w-full object-cover"
                   loading="eager"
@@ -288,7 +288,7 @@ export function About() {
               <div className="glass-strong h-full w-full overflow-hidden rounded-3xl p-2">
                 <div className="relative h-full w-full overflow-hidden rounded-[1.4rem] bg-gradient-to-br from-[#111827] to-[#0b1120]">
                   <img
-                    src={aslahPhoto.url}
+                    src={profileImageSrc}
                     alt={profile.name}
                     className="absolute inset-0 h-full w-full object-cover"
                     loading="lazy"
