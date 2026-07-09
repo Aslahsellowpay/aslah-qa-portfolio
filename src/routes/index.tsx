@@ -1,24 +1,83 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Nav, Footer, BackToTop } from "@/components/portfolio/shell";
+import {
+  AnimatedBackdrop,
+  MouseGlow,
+  ScrollProgress,
+} from "@/components/portfolio/effects";
+import {
+  Hero,
+  About,
+  Skills,
+  Experience,
+  Projects,
+  Certifications,
+  Achievements,
+  Tools,
+  Testimonials,
+  Blog,
+  GitHubSection,
+  Services,
+  FAQ,
+  Contact,
+} from "@/components/portfolio/sections";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Aslah Khan KT",
+          jobTitle: "Software QA Engineer",
+          email: "mailto:aslahkhanofficial@gmail.com",
+          telephone: "+971505820667",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Dubai",
+            addressCountry: "AE",
+          },
+          knowsAbout: [
+            "Manual Testing",
+            "Automation Testing",
+            "API Testing",
+            "Selenium",
+            "Java",
+            "SQL",
+            "FinTech Testing",
+          ],
+        }),
+      },
+    ],
+  }),
+  component: Home,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function Home() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="relative min-h-screen overflow-x-hidden">
+      <AnimatedBackdrop />
+      <MouseGlow />
+      <ScrollProgress />
+      <Nav />
+      <Hero />
+      <About />
+      <Skills />
+      <Experience />
+      <Projects />
+      <Certifications />
+      <Achievements />
+      <Tools />
+      <Services />
+      <Testimonials />
+      <Blog />
+      <GitHubSection />
+      <FAQ />
+      <Contact />
+      <Footer />
+      <BackToTop />
+    </main>
   );
 }
