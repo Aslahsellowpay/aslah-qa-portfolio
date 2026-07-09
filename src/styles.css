@@ -165,7 +165,6 @@
 }
 
 @utility text-gradient {
-  background: var(--gradient-brand);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
