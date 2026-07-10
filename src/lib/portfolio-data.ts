@@ -10,7 +10,7 @@ export const profile = {
   phone: "+971 505820667",
   nationality: "Indian",
   languages: ["English", "Hindi", "Malayalam"],
-  linkedin: "https://www.linkedin.com/in/aslah-khan-kt",
+  linkedin: "https://www.linkedin.com/in/aslah-khan-703633215/",
   github: "https://github.com/aslahkhan",
   summary:
     "Detail-oriented QA Engineer with 3+ years of experience across Manual, Automation, API and SQL validation for Banking, FinTech and Enterprise SaaS. I design robust test strategies, automate regression flows, and partner with engineering teams to ship reliable, high-quality software in Agile environments.",
@@ -70,6 +70,7 @@ export const skillGroups = [
       { name: "SDLC & STLC", level: 92 },
       { name: "Defect Lifecycle", level: 95 },
       { name: "Test Documentation", level: 90 },
+      { name: "Requirements Analysis", level: 93 },
     ],
   },
 ];
@@ -79,7 +80,7 @@ export const experience = [
     role: "Software Test Engineer",
     company: "ZilMoney",
     period: "Sep 2023 – Mar 2026",
-    location: "Remote · FinTech",
+    location: "Remote / UAE / India · FinTech",
     bullets: [
       "Designed and executed manual & automation test cases for banking and payment products.",
       "Performed REST API validation with Postman and backend SQL verification across microservices.",
@@ -102,7 +103,7 @@ export const experience = [
 
 export const projects = [
   {
-    name: "ZILBANK",
+    name: "Online Check Writer / ZILBANK",
     tag: "Digital Banking Platform",
     overview:
       "A modern digital banking suite handling accounts, transfers, cards and compliance flows for US SMBs.",
@@ -276,7 +277,8 @@ export const blog = [
     title: "SQL for Testers: Queries I Run Every Single Day",
     tag: "SQL",
     excerpt:
-      "The joins, aggregates and window functions that make backend validation feel effortless."
+      "The joins, aggregates and window functions that make backend validation feel effortless.",
+
   },
 ];
 
@@ -330,8 +332,8 @@ export const faqs = [
     a: "Both. I'm based in Dubai and available for on-site roles across the UAE, and comfortable collaborating fully remotely with global teams.",
   },
   {
-    q: "Can you automate an existing manual project?",
-    a: "Absolutely. I typically start with a pilot on the highest-ROI flows, then scale a maintainable Selenium + TestNG framework around your CI.",
+    q: "What types of testing do you specialize in?",
+    a: "I specialize in Functional Testing, Regression Testing, API Testing, Integration Testing, UI Testing, Smoke Testing, Sanity Testing, UAT Support, and End-to-End testing to ensure reliable software delivery.",
   },
   {
     q: "Which industries have you tested for?",
@@ -340,6 +342,14 @@ export const faqs = [
   {
     q: "How soon can you join?",
     a: "I'm an immediate joiner and can align to your onboarding timeline the moment we agree on the role.",
+  },
+  {
+    q: "How do you report and manage bugs?",
+    a: "I use Jira for defect tracking and management. I create detailed bug reports with clear steps to reproduce, expected vs actual results, screenshots/videos, logs, severity, and priority details.",
+  },
+  {
+    q: "Do you have experience testing mobile applications?",
+    a: "Yes. I have experience validating mobile application functionality, usability, API interactions, and device compatibility.",
   },
 ];
 

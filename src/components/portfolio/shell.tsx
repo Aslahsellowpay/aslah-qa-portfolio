@@ -26,26 +26,33 @@ const siteIconSrc = "/images/favicon-32x32.ico";
 
 export function ThemeToggle() {
   const [light, setLight] = useState(false);
+
   useEffect(() => {
-    const t = typeof localStorage !== "undefined" ? localStorage.getItem("theme") : null;
+    const t =
+      typeof localStorage !== "undefined"
+        ? localStorage.getItem("theme")
+        : null;
+
     setLight(t === "light");
   }, []);
-  const toggle = () => {
-    const next = !light;
-    setLight(next);
-    document.documentElement.classList.toggle("light", next);
-    try {
-      localStorage.setItem("theme", next ? "light" : "dark");
-    } catch {}
-  };
+
   return (
     <button
-      onClick={toggle}
-      aria-label="Toggle theme"
-      className="relative inline-flex h-10 w-10 items-center justify-center rounded-full glass hover:glow-ring transition-all"
+      disabled
+      aria-label="Theme toggle temporarily disabled"
+      className="relative inline-flex h-10 w-10 items-center justify-center rounded-full glass opacity-60 cursor-not-allowed"
     >
-      <Sun className={`absolute h-4 w-4 transition-all ${light ? "opacity-100 rotate-0" : "opacity-0 -rotate-90"}`} />
-      <Moon className={`absolute h-4 w-4 transition-all ${light ? "opacity-0 rotate-90" : "opacity-100 rotate-0"}`} />
+      <Sun
+        className={`absolute h-4 w-4 transition-all ${
+          light ? "opacity-100 rotate-0" : "opacity-0 -rotate-90"
+        }`}
+      />
+
+      <Moon
+        className={`absolute h-4 w-4 transition-all ${
+          light ? "opacity-0 rotate-90" : "opacity-100 rotate-0"
+        }`}
+      />
     </button>
   );
 }

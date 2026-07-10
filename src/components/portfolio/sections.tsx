@@ -665,9 +665,6 @@ export function Blog() {
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="font-display text-lg font-semibold leading-snug">{b.title}</h3>
                   <p className="mt-2 flex-1 text-sm text-muted-foreground">{b.excerpt}</p>
-                  <div className="mt-5 text-xs text-muted-foreground">
-  <span>{b.read}</span>
-</div>
                 </div>
               </article>
             </Reveal>
@@ -678,107 +675,7 @@ export function Blog() {
   );
 }
 
-/* --------------------------- GitHub --------------------------- */
 
-export function GitHubSection() {
-  const cells = Array.from({ length: 7 * 26 });
-  return (
-    <section className="relative py-28">
-      <div className="mx-auto max-w-6xl px-6">
-        <SectionHeader
-          eyebrow="Open Source"
-          title="Building in the open."
-          desc="A snapshot of my recent activity and repos I keep sharpening."
-        />
-        <div className="mt-14 grid gap-6 lg:grid-cols-[1.2fr_.8fr]">
-          <Reveal>
-            <div className="glass rounded-3xl p-6">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2 text-sm">
-                  <Github className="h-4 w-4" />
-                  <span className="font-medium">@aslahkhan</span>
-                </div>
-                <div className="text-xs text-muted-foreground">Last 6 months</div>
-              </div>
-              <div className="mt-6 grid grid-cols-[repeat(26,minmax(0,1fr))] gap-1">
-                {cells.map((_, i) => {
-                  const seed = (i * 9301 + 49297) % 233280;
-                  const v = seed / 233280;
-                  const level = v > 0.85 ? 4 : v > 0.65 ? 3 : v > 0.4 ? 2 : v > 0.2 ? 1 : 0;
-                  const bg = [
-                    "bg-white/5",
-                    "bg-[#4f46e5]/30",
-                    "bg-[#7c3aed]/50",
-                    "bg-[#06b6d4]/70",
-                    "bg-[#22d3ee]",
-                  ][level];
-                  return <div key={i} className={`aspect-square rounded-[3px] ${bg}`} />;
-                })}
-              </div>
-              <div className="mt-4 flex items-center justify-between text-xs text-muted-foreground">
-                <span>Less</span>
-                <div className="flex gap-1">
-                  {["bg-white/5", "bg-[#4f46e5]/30", "bg-[#7c3aed]/50", "bg-[#06b6d4]/70", "bg-[#22d3ee]"].map(
-                    (c) => (
-                      <span key={c} className={`h-3 w-3 rounded-[3px] ${c}`} />
-                    ),
-                  )}
-                </div>
-                <span>More</span>
-              </div>
-              <div className="mt-6 grid grid-cols-3 gap-3 text-center">
-                {[
-                  ["842", "Contributions"],
-                  ["48", "Repositories"],
-                  ["126", "Stars earned"],
-                ].map(([k, v]) => (
-                  <div key={v} className="glass rounded-2xl p-3">
-                    <div className="font-display text-lg font-black text-gradient bg-gradient-to-r from-[#4f46e5] to-[#22d3ee]">
-                      {k}
-                    </div>
-                    <div className="text-[11px] uppercase tracking-widest text-muted-foreground">
-                      {v}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </Reveal>
-          <div className="grid gap-4">
-            {repos.map((r, i) => (
-              <Reveal key={r.name} delay={i * 0.05}>
-                <a
-                  href="#"
-                  className="group glass flex items-start gap-4 rounded-2xl p-5 transition hover:glow-ring"
-                >
-                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-[#4f46e5]/30 to-[#06b6d4]/30">
-                    <Github className="h-5 w-5" />
-                  </span>
-                  <div className="min-w-0 flex-1">
-                    <div className="flex items-center justify-between gap-3">
-                      <div className="truncate font-medium">{r.name}</div>
-                      <ExternalLink className="h-3.5 w-3.5 text-muted-foreground transition group-hover:text-foreground" />
-                    </div>
-                    <div className="mt-1 text-xs text-muted-foreground">{r.desc}</div>
-                    <div className="mt-3 flex items-center gap-4 text-[11px] text-muted-foreground">
-                      <span className="inline-flex items-center gap-1">
-                        <span className="h-2 w-2 rounded-full bg-[#22d3ee]" />
-                        {r.lang}
-                      </span>
-                      <span className="inline-flex items-center gap-1">
-                        <Star className="h-3 w-3" /> {r.stars}
-                      </span>
-                    </div>
-                  </div>
-                </a>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 /* --------------------------- Services --------------------------- */
 

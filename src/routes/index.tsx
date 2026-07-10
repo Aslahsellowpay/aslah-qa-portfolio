@@ -73,7 +73,6 @@ function Home() {
       <Services />
       <Testimonials />
       <Blog />
-      <GitHubSection />
       <FAQ />
       <Contact />
       <Footer />
