@@ -22,6 +22,8 @@ const NAV = [
   { href: "/#contact", label: "Contact" },
 ];
 
+const siteIconSrc = "/images/favicon-32x32.ico";
+
 export function ThemeToggle() {
   const [light, setLight] = useState(false);
   useEffect(() => {
@@ -67,10 +69,15 @@ export function Nav() {
         >
           <Link to="/" className="group flex items-center gap-2">
             <span className="grid h-8 w-8 place-items-center rounded-full bg-gradient-to-br from-[#4f46e5] via-[#7c3aed] to-[#06b6d4] text-sm font-black text-white">
-              A
+              <img
+                src={siteIconSrc}
+                alt=""
+                aria-hidden="true"
+                className="h-5 w-5 rounded-full object-contain"
+              />
             </span>
             <span className="hidden sm:block font-display text-sm font-semibold tracking-tight">
-              Aslah Khan<span className="text-muted-foreground">.qa</span>
+              ASLAH KHAN KT
             </span>
           </Link>
           <nav className="hidden items-center gap-1 md:flex">
@@ -163,7 +170,12 @@ export function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center gap-2">
               <span className="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-[#4f46e5] via-[#7c3aed] to-[#06b6d4] font-black text-white">
-                A
+                <img
+                  src={siteIconSrc}
+                  alt=""
+                  aria-hidden="true"
+                  className="h-6 w-6 rounded-full object-contain"
+                />
               </span>
               <span className="font-display text-lg font-semibold">Aslah Khan KT</span>
             </div>

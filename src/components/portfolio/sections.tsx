@@ -175,7 +175,7 @@ export function Hero() {
           </Reveal>
           <Reveal delay={0.15}>
             <div className="mt-8 flex flex-wrap items-center gap-3">
-              <MagneticButton href="/resume.pdf" download>
+              <MagneticButton href="/resume/Aslah_Khan_Software_QA_Engineer_Dubai.pdf" download>
                 <Download className="h-4 w-4" />
                 Download Resume
               </MagneticButton>
@@ -926,7 +926,7 @@ export function Contact() {
                 >
                   Send Message <ArrowRight className="h-4 w-4" />
                 </button>
-                <a href="/resume.pdf" download className="inline-flex items-center gap-2 rounded-full glass px-5 py-3 text-sm hover:glow-ring">
+                <a href="/resume/Aslah_Khan_Software_QA_Engineer_Dubai.pdf" download className="inline-flex items-center gap-2 rounded-full glass px-5 py-3 text-sm hover:glow-ring">
                   <Download className="h-4 w-4" /> Resume
                 </a>
                 {sent && (
