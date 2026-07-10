@@ -552,7 +552,7 @@ export function Certifications() {
     <section className="relative py-24">
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeader eyebrow="Certifications" title="Learning that keeps compounding." />
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-5 sm:grid-cols-2">
           {certifications.map((c, i) => (
             <Reveal key={c.name} delay={i * 0.05}>
               <div className="glass gradient-border rounded-3xl p-6 transition hover:glow-ring">
@@ -685,12 +685,9 @@ export function Blog() {
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="font-display text-lg font-semibold leading-snug">{b.title}</h3>
                   <p className="mt-2 flex-1 text-sm text-muted-foreground">{b.excerpt}</p>
-                  <div className="mt-5 flex items-center justify-between text-xs text-muted-foreground">
-                    <span>{b.read}</span>
-                    <span className="inline-flex items-center gap-1 text-[#22d3ee]">
-                      Read <ArrowRight className="h-3 w-3 transition group-hover:translate-x-1" />
-                    </span>
-                  </div>
+                  <div className="mt-5 text-xs text-muted-foreground">
+  <span>{b.read}</span>
+</div>
                 </div>
               </article>
             </Reveal>

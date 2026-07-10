@@ -182,14 +182,9 @@ export const certifications = [
     year: "2023",
   },
   {
-    name: "ISTQB Foundation Level",
-    issuer: "ISTQB",
-    year: "2024",
-  },
-  {
-    name: "Postman API Fundamentals",
-    issuer: "Postman",
-    year: "2024",
+    name: "Software testing specialist",
+    issuer: "Luminar technolab",
+    year: "2023",
   },
 ];
 
@@ -219,25 +214,25 @@ export const tools = [
 
 export const testimonials = [
   {
-    name: "Rahul Menon",
-    role: "Engineering Manager, ZilMoney",
+    name: "Vybhav",
+    role: "Flutter Developer, ZilMoney",
     quote:
-      "Aslah's eye for edge cases saved us multiple critical incidents. He owns quality end-to-end and lifts the whole team's bar.",
+      "Aslah brings strong attention to detail and end-to-end quality ownership, helping teams deliver better products.",
   },
   {
-    name: "Sara Al Marri",
-    role: "Product Owner, FinTech",
+    name: "Faheem",
+    role: "Flutter Developer, FinTech",
     quote:
-      "Rare combination of QA depth and product empathy. Our release confidence went up the moment Aslah joined the sprint.",
+      "Strong QA expertise with a product mindset. Aslah brought confidence to every release.",
   },
   {
-    name: "Vikram Sethi",
+    name: "Midhun",
     role: "Senior Backend Developer",
     quote:
       "His API test coverage and SQL validation catch problems long before they reach staging. A true engineering partner.",
   },
   {
-    name: "Emma Clarke",
+    name: "Nihad",
     role: "Client, Payments",
     quote:
       "Detailed reports, clean reproduction steps, and a calm delivery. Working with Aslah felt like adding a senior QA lead.",
@@ -249,43 +244,39 @@ export const blog = [
     title: "Why Regression Testing Is Your Release Safety Net",
     tag: "Testing",
     excerpt:
-      "How a well-designed regression suite becomes the difference between confident weekly releases and painful hotfix weekends.",
-    read: "6 min read",
+      "How a well-designed regression suite becomes the difference between confident weekly releases and painful hotfix weekends."
   },
   {
     title: "10 API Testing Best Practices Every QA Should Ship With",
     tag: "API",
     excerpt:
-      "From contract tests to negative payloads — a pragmatic checklist that turns Postman into a serious quality tool.",
-    read: "8 min read",
+      "From contract tests to negative payloads — a pragmatic checklist that turns Postman into a serious quality tool."
+    
   },
   {
-    title: "Selenium Tips That Cut My Flaky Tests by 70%",
+    title: "Reducing Test Execution Time with Smarter Automation",
     tag: "Automation",
     excerpt:
-      "Explicit waits, smart locators, page objects and the single config change that made my suite dramatically more stable.",
-    read: "7 min read",
+      "Parallel execution, optimized locators, and efficient test design techniques to run automation suites faster without compromising coverage.",
+    
   },
   {
     title: "A Clean Jira Workflow for High-Velocity QA Teams",
     tag: "Process",
     excerpt:
-      "The exact ticket lifecycle, labels and dashboards I use to keep defect signal loud and bureaucracy quiet.",
-    read: "5 min read",
+      "The exact ticket lifecycle, labels and dashboards I use to keep defect signal loud and bureaucracy quiet."
   },
   {
     title: "Designing an Automation Strategy That Actually Scales",
     tag: "Strategy",
     excerpt:
-      "Pyramid, ROI, ownership and tooling — the framework I use before writing a single line of Selenium.",
-    read: "9 min read",
+      "Pyramid, ROI, ownership and tooling — the framework I use before writing a single line of Selenium."
   },
   {
     title: "SQL for Testers: Queries I Run Every Single Day",
     tag: "SQL",
     excerpt:
-      "The joins, aggregates and window functions that make backend validation feel effortless.",
-    read: "6 min read",
+      "The joins, aggregates and window functions that make backend validation feel effortless."
   },
 ];
 
@@ -296,11 +287,11 @@ export const services = [
   },
   {
     title: "Automation Testing",
-    desc: "Selenium + Java + TestNG frameworks tailored to your app and CI pipeline.",
+    desc: "Selenium + Java + TestNG frameworks designed for reliable, scalable, and maintainable automated test execution.",
   },
   {
     title: "API Testing",
-    desc: "Contract, functional and negative testing of REST APIs with Postman & Newman.",
+    desc: "Contract, functional and negative testing of REST APIs with Postman.",
   },
   {
     title: "QA Consulting",
@@ -315,9 +306,18 @@ export const services = [
     desc: "Reproducible, prioritised defect reports with logs, evidence and impact.",
   },
   {
-    title: "Performance Testing",
-    desc: "Baseline, load and stress testing to surface bottlenecks before your users do.",
+    title: "Mobile App Testing",
+    desc: "Comprehensive testing of Android and iOS applications covering functionality, usability, compatibility, performance, and device-specific issues.",
   },
+  {
+    title: "User Acceptance Testing (UAT)",
+    desc: "Supporting business teams with scenario-based validation to ensure applications meet functional and business requirements.",
+  },
+  {
+    title: "Cross-Browser Testing",
+    desc: "Testing web applications across multiple browsers and platforms to ensure consistent user experience and compatibility.",
+  },
+
 ];
 
 export const faqs = [
