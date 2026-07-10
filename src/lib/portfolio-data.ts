@@ -11,7 +11,7 @@ export const profile = {
   nationality: "Indian",
   languages: ["English", "Hindi", "Malayalam"],
   linkedin: "https://www.linkedin.com/in/aslah-khan-703633215/",
-  github: "https://github.com/aslahkhan",
+  github: "https://github.com/Aslahsellowpay",
   summary:
     "Detail-oriented QA Engineer with 3+ years of experience across Manual, Automation, API and SQL validation for Banking, FinTech and Enterprise SaaS. I design robust test strategies, automate regression flows, and partner with engineering teams to ship reliable, high-quality software in Agile environments.",
   typewriter: [
