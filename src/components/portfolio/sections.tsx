@@ -22,7 +22,6 @@ import {
   ShieldCheck,
   Bug,
   Code2,
-  Cpu,
   Database,
   Layers,
   Zap,
@@ -281,26 +280,7 @@ export function About() {
     <section id="about" className="relative py-28">
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeader eyebrow="About" title="Quality is a mindset, not a step." />
-        <div className="mt-14 grid gap-10 lg:grid-cols-[.9fr_1.1fr] lg:items-center">
-          <Reveal>
-            <div className="relative mx-auto aspect-square w-full max-w-md">
-              <div className="absolute inset-0 -z-10 rounded-3xl bg-gradient-to-br from-[#4f46e5]/40 to-[#06b6d4]/40 blur-3xl" />
-              <div className="glass-strong h-full w-full overflow-hidden rounded-3xl p-2">
-                <div className="relative h-full w-full overflow-hidden rounded-[1.4rem] bg-gradient-to-br from-[#111827] to-[#0b1120]">
-                  <img
-                    src={profileImageSrc}
-                    alt={profile.name}
-                    className="absolute inset-0 h-full w-full object-cover"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-tr from-[#050816]/70 via-transparent to-[#06b6d4]/10" />
-                  <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs">
-                    <Cpu className="h-3.5 w-3.5 text-[#22d3ee]" /> Test. Break. Ship.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Reveal>
+        <div className="mt-14">
           <Reveal delay={0.1}>
             <div>
               <h3 className="font-display text-2xl font-bold">
